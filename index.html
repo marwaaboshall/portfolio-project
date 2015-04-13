@@ -10,6 +10,7 @@
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="picturefill.min.js"></script>
 </head>
 <body>
     <div class="container">
@@ -29,7 +30,10 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <img class="img-responsive" src="images/cover.png" alt="Cover photo with some of my games characters"/>
+                <picture>
+                    <source media="(max-width:900px)" srcset="images/cover-medium.png">
+                    <img class="img-responsive" src="images/cover.png" alt="Cover photo with some of my games characters"/>
+                </picture>
             </div>
         </div>
         <div class="row">
@@ -39,17 +43,27 @@
         </div>
         <div class="row text-center">
             <div class="col-md-4">
-                <img class="img-responsive" src="images/blublye-morning.png" alt="Blublye Game Thumbnail" data-toggle="modal" data-target="#project1"/>
+                <picture>
+                    <source media="(max-width:400px)" srcset="images/blublye-morning-medium.png">
+                    <img class="img-responsive" src="images/blublye-morning-large.png" alt="Blublye Game Thumbnail" data-toggle="modal" data-target="#project1"/>
+                </picture>
+                
                 <h3 class="text-center">BluBlye</h3>
                 <a class="text-center" href="https://play.google.com/store/apps/details?id=com.studios2024.BluBlye" target="_blank">Link</a>
             </div>
             <div class="col-md-4">
-                <img class="img-responsive" src="images/JolyJello.png" alt="JolyJello Game Thumbnail" data-toggle="modal" data-target="#project2"/>
+                <picture>
+                    <source media="(max-width:400px)" srcset="images/JolyJello-medium.png">
+                    <img class="img-responsive" src="images/JolyJello.png" alt="JolyJello Game Thumbnail" data-toggle="modal" data-target="#project2"/>
+                </picture>
                 <h3 class="text-center">JolyJello</h3>
-                <a class="text-center"href="https://play.google.com/store/apps/detailsid=com.Company.JolyJelloPro" target="_blank">Link</a>
+                <a class="text-center" href="https://play.google.com/store/apps/detailsid=com.Company.JolyJelloPro" target="_blank">Link</a>
             </div>
             <div class="col-md-4">
-                <img class="img-responsive" src="images/TinyC.png" alt="TinyC Game Thumbnail" data-toggle="modal" data-target="#project3"/>
+                <picture>
+                    <source media="(max-width:400px)" srcset="images/TinyC-medium.png">
+                    <img class="img-responsive" src="images/TinyC.png" alt="TinyC Game Thumbnail" data-toggle="modal" data-target="#project3"/>
+                </picture>
                 <h3 class="text-center">TinyC</h3>
                 <a class="text-center" href="http://gamejolt.com/games/arcade/tiny-c/25852/#" target="_blank">Link</a>
             </div>
@@ -57,14 +71,14 @@
     </div>
 
     <!-- Modal -->
-    <div class="modal fade" id="project1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal fade" id="project1" tabindex="-1" role="dialog" aria-labelledby="BluBlyeModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title" id="myModalLabel">BluBlye</h4>
+                    <h4 class="modal-title" id="BluBlyeModalLabel">BluBlye</h4>
                 </div>
                 <div class="modal-body ">
-                    <img class="img-responsive center-block" src="images/blublye-morning.png" alt="BluBlye Game Thumbnail">
+                 <img class="img-responsive center-block" src="images/blublye-morning-large.png" alt="BluBlye Game Thumbnail">              
                    <p>
                     Welcome to BluBlye's city!<br>
                     BluBlye's city is overrun by lots of creepies, there's only one thing left to do - survive! As the lone survivor of a creepies apocalypse, it's up to you to battle massive number of creepies in a never ending fight for survival! <br>How long can you hold out?
@@ -75,7 +89,6 @@
                         <li>Simple gameplay, with more depth than meets the eye. Manage your movements carefully, or become the dinner of creepies. </li>
                         <li>Experience the day/night cycles of BluBlye's city, according to your current time zone!.</li>
                     </ul>
-                    </p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -84,11 +97,11 @@
         </div>
     </div>
     
-    <div class="modal fade" id="project2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal fade" id="project2" tabindex="-1" role="dialog" aria-labelledby="JolyModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title" id="myModalLabel">JolyJello</h4>
+                    <h4 class="modal-title" id="JolyModalLabel">JolyJello</h4>
                 </div>
                 <div class="modal-body">
                     <img class="img-responsive center-block" src="images/JolyJello.png" alt="JolyJello Game Thumbnail">
@@ -99,7 +112,6 @@
                         <li>Defend yourself with different weapons found through your continuous game-play!.</li>
                         <li>Simple gameplay, with more depth than meets the eye. Manage your movements carefully, or become the dinner of creepies.</li>
                     </ul>
-                    </p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -107,11 +119,11 @@
             </div>
         </div>
     </div>
-        <div class="modal fade" id="project3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal fade" id="project3" tabindex="-1" role="dialog" aria-labelledby="TinycModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title" id="myModalLabel">TinyC</h4>
+                    <h4 class="modal-title" id="TinycModalLabel">TinyC</h4>
                 </div>
                 <div class="modal-body">
                     <img class="img-responsive center-block" src="images/TinyC.png" alt="TinyC Game Thumbnail">
@@ -122,7 +134,6 @@
                         <li>Defend yourself by not touching the red obstacles.</li>
                         <li>Move fast and be careful, don't make him get bigger!.</li>
                     </ul>
-                    </p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
